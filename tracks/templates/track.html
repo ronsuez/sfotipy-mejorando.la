@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Track Detail</title>
+</head>
+<body>
+    <h1>Track Detail</h1>
+    <hr/>
+    <section>
+        <p>Title:  <strong>{{ track.title }}</strong></p>
+        <p>Order:  <strong>{{ track.order }}</strong></p>
+        <p>Album:  <strong>{{ track.album }}</strong></p>
+        <p>Artist: <strong>{{ track.artist }}</strong></p>
+        <p>Artist Bio: {{ track.artist.bio }}</p>
+    </section>
+</body>
+</html>
