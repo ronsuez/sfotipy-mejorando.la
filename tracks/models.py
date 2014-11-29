@@ -13,6 +13,10 @@ class Track(models.Model):
     album = models.ForeignKey(Album)
     artist = models.ForeignKey(Artist)
 
-#This configures form's field visibility
+    #custom function
+    def player(self):
+        return 'player: ' + self.title
+
+    #This configures form's field visibility
     def __unicode__(self):
         return self.title

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Artist Detail</title>
+</head>
+<body>
+    <h4>{{ artist.first_name}} {{ artist.last_name}}</h4>
+    <hr/>
+    <section>
+        <p>Bio</p>
+        <p>{{ artist.bio }}</p>
+    </section>
+     <section>
+        <p>Albums</p>
+        <ul>
+            {% for album in artist.album %}
+                <li>album.title</li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

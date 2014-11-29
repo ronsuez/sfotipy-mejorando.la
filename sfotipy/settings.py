@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'south',
     'tracks',
     'albums',
-    'artists'
+    'artists',
+    'user_profile'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -84,3 +85,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+
+#Backends
+
+AUTHENTICATION_BACKENDS = {
+    'user_profile.backends.EmailBackend',
+    # Uncomment the following to make Django tests pass:
+    'django.contrib.auth.backends.ModelBackend',
+}

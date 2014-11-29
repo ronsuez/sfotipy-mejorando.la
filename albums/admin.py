@@ -4,4 +4,16 @@ from django.contrib import admin
 
 from .models import Album
 
-admin.site.register(Album)
+from tracks.models import Track
+
+
+class AlbumInLine(admin.StackedInline):
+        model = Track
+
+
+class AlbumAdmin(admin.ModelAdmin):
+    inlines = [AlbumInLine, ]
+
+
+
+admin.site.register(Album, AlbumAdmin)
